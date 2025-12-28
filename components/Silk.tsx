@@ -3,9 +3,9 @@
 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { forwardRef, useRef, useMemo, useLayoutEffect } from 'react';
-import { Color } from 'three';
+import { Color, Mesh } from 'three';
 
-const hexToNormalizedRGB = hex => {
+const hexToNormalizedRGB = (hex: string) => {
     hex = hex.replace('#', '');
     return [
         parseInt(hex.slice(0, 2), 16) / 255,
@@ -71,17 +71,24 @@ void main() {
 }
 `;
 
-const SilkPlane = forwardRef(function SilkPlane({ uniforms }, ref) {
+interface SilkPlaneProps {
+    uniforms: { [key: string]: { value: any } };
+}
+
+const SilkPlane = forwardRef<Mesh, SilkPlaneProps>(function SilkPlane({ uniforms }, ref) {
     const { viewport } = useThree();
 
     useLayoutEffect(() => {
-        if (ref.current) {
+        if (ref && 'current' in ref && ref.current) {
             ref.current.scale.set(viewport.width, viewport.height, 1);
         }
     }, [ref, viewport]);
 
     useFrame((_, delta) => {
-        ref.current.material.uniforms.uTime.value += 0.1 * delta;
+        if (ref && 'current' in ref && ref.current) {
+            // @ts-ignore
+            ref.current.material.uniforms.uTime.value += 0.1 * delta;
+        }
     });
 
     return (
@@ -93,15 +100,23 @@ const SilkPlane = forwardRef(function SilkPlane({ uniforms }, ref) {
 });
 SilkPlane.displayName = 'SilkPlane';
 
-const Silk = ({ speed = 5, scale = 1, color = '#d8b4fe', noiseIntensity = 1.5, rotation = 0 }) => {
-    const meshRef = useRef();
+interface SilkProps {
+    speed?: number;
+    scale?: number;
+    color?: string;
+    noiseIntensity?: number;
+    rotation?: number;
+}
+
+const Silk = ({ speed = 5, scale = 1, color = '#d8b4fe', noiseIntensity = 1.5, rotation = 0 }: SilkProps) => {
+    const meshRef = useRef<Mesh>(null);
 
     const uniforms = useMemo(
         () => ({
             uSpeed: { value: speed },
             uScale: { value: scale },
             uNoiseIntensity: { value: noiseIntensity },
-            uColor: { value: new Color(...hexToNormalizedRGB(color)) },
+            uColor: { value: new Color(...hexToNormalizedRGB(color) as [number, number, number]) },
             uRotation: { value: rotation },
             uTime: { value: 0 }
         }),
