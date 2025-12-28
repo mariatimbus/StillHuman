@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Code Display</title>
+</head>
+<body>
+    <h1>Testing sessionStorage for Code Display</h1>
+    <button onclick="testSessionStorage()">Simulate Successful Submission</button>
+    <button onclick="goToThankYou()">Go to Thank You Page</button>
+    <div id="result"></div>
+
+    <script>
+        function testSessionStorage() {
+            const testData = {
+                deletion_code: "TEST-DEL-CODE-123-456-789",
+                inbox_code: "TEST-INB-CODE-987-654-321",
+                comfort_message: {
+                    title: "You Are Brave",
+                    message: "Thank you for sharing your story.",
+                    resources: ["Resource 1", "Resource 2"]
+                },
+                warnings: ["Test warning 1"]
+            };
+            
+            sessionStorage.setItem('submission_data', JSON.stringify(testData));
+            document.getElementById('result').innerHTML = '<p style="color: green;">Test data stored in sessionStorage!</p>';
+            console.log('Stored:', testData);
+        }
+
+        function goToThankYou() {
+            window.location.href = '/submit/thank-you';
+        }
+    </script>
+</body>
+</html>
