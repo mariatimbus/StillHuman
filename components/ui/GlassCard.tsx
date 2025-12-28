@@ -19,14 +19,14 @@ export function GlassCard({
 
     const variants = {
         default:
-            'bg-[#F8F4EC]/90 border-hot-pink/50 shadow-[0_8px_32px_rgba(232,60,145,0.15),0_2px_8px_rgba(232,60,145,0.08)]',
+            'bg-[#F8F4EC] border-hot-pink/50 shadow-[0_8px_32px_rgba(232,60,145,0.15),0_2px_8px_rgba(232,60,145,0.08)]',
         highlight:
-            'bg-[#FF8FB7]/90 border-hot-pink/60 shadow-[0_8px_32px_rgba(232,60,145,0.2),0_2px_8px_rgba(232,60,145,0.1)]',
-        rose: 'bg-[#E83C91]/90 border-dark-plum/50 shadow-[0_8px_32px_rgba(67,51,76,0.25),0_2px_8px_rgba(67,51,76,0.12)]',
-        blue: 'bg-[#43334C]/90 border-light-pink/60 shadow-[0_8px_32px_rgba(255,143,183,0.2),0_2px_8px_rgba(255,143,183,0.1)]',
-        green: 'bg-[#F8F4EC]/90 border-hot-pink/60 shadow-[0_8px_32px_rgba(232,60,145,0.2),0_2px_8px_rgba(232,60,145,0.1)]',
-        yellow: 'bg-[#FF8FB7]/90 border-dark-plum/50 shadow-[0_8px_32px_rgba(67,51,76,0.2),0_2px_8px_rgba(67,51,76,0.1)]',
-        purple: 'bg-[#E83C91]/90 border-light-pink/60 shadow-[0_8px_32px_rgba(255,143,183,0.25),0_2px_8px_rgba(255,143,183,0.12)]',
+            'bg-gradient-to-br from-[#FF8FB7]/70 to-[#FF8FB7]/50 border-hot-pink/60 shadow-[0_8px_32px_rgba(232,60,145,0.2),0_2px_8px_rgba(232,60,145,0.1)]',
+        rose: 'bg-gradient-to-br from-[#E83C91]/60 to-[#FF8FB7]/70 border-hot-pink/50 shadow-[0_8px_32px_rgba(232,60,145,0.25),0_2px_8px_rgba(232,60,145,0.12)]',
+        blue: 'bg-gradient-to-br from-[#FF8FB7]/90 to-[#F8F4EC] border-light-pink/60 shadow-[0_8px_32px_rgba(255,143,183,0.2),0_2px_8px_rgba(255,143,183,0.1)]',
+        green: 'bg-gradient-to-br from-[#F8F4EC] to-[#F8F4EC]/80 border-hot-pink/60 shadow-[0_8px_32px_rgba(232,60,145,0.2),0_2px_8px_rgba(232,60,145,0.1)]',
+        yellow: 'bg-gradient-to-br from-[#FF8FB7]/80 to-[#FF8FB7]/60 border-light-pink/50 shadow-[0_8px_32px_rgba(255,143,183,0.2),0_2px_8px_rgba(255,143,183,0.1)]',
+        purple: 'bg-gradient-to-br from-[#E83C91]/70 to-[#E83C91]/50 border-hot-pink/60 shadow-[0_8px_32px_rgba(232,60,145,0.25),0_2px_8px_rgba(232,60,145,0.12)]',
     };
 
     const hoverStyles = hoverEffect

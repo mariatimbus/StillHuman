@@ -310,12 +310,12 @@ export default function HomePage() {
                 {/* Navigation */}
                 <nav className="w-full px-6 py-6">
                     <div className="max-w-7xl mx-auto flex justify-between items-center">
-                        <div className="flex items-center gap-2">
-                            <div className="w-10 h-10 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 hover:scale-110 transition-transform duration-200">
-                                <span className="text-2xl animate-pulse-slow">💙</span>
+                        <div className="flex items-center gap-4">
+                            <div className="w-24 h-24 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 hover:scale-110 transition-transform duration-200 p-2">
+                                <img src="/invisible-borders-logo.png" alt="Invisible Borders" className="w-full h-full object-contain" />
                             </div>
-                            <span className="font-serif text-3xl font-bold text-dark-plum tracking-wide hover:text-hot-pink transition-colors duration-200">
-                                Still Human
+                            <span className="font-serif text-3xl font-bold text-black tracking-wide hover:text-hot-pink transition-colors duration-200">
+                                Invisible Borders
                             </span>
                         </div>
 
@@ -341,7 +341,7 @@ export default function HomePage() {
                         <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-hot-pink/30 to-transparent rounded-full" />
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8 animate-fade-in-up shadow-[0_4px_12px_rgba(232,60,145,0.1)]">
-                            <span className="text-sm font-medium text-dark-plum">
+                            <span className="text-sm font-medium text-black">
                                 A safe space for your story
                             </span>
                         </div>
@@ -353,7 +353,7 @@ export default function HomePage() {
                                 delay={100}
                                 animateBy="words"
                                 direction="top"
-                                className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-dark-plum leading-tight drop-shadow-sm mb-2 text-center justify-center"
+                                className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-black leading-tight drop-shadow-sm mb-2 text-center justify-center"
                             />
                             <BlurText
                                 text="You matter."
@@ -364,20 +364,20 @@ export default function HomePage() {
                             />
                         </div>
 
-                        <p className="text-lg md:text-xl text-dark-plum/80 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+                        <p className="text-lg md:text-xl text-black/90 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
                             Share your story anonymously. Receive support from others. You are not alone.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link href="/submit">
-                                <GlassButton size="lg" className="w-full sm:w-auto">
+                                <button className="px-8 py-4 text-lg font-semibold bg-hot-pink text-white rounded-full shadow-[0_8px_24px_rgba(232,60,145,0.4)] hover:shadow-[0_12px_32px_rgba(232,60,145,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-hot-pink hover:border-light-pink w-full sm:w-auto">
                                     Share Your Story
-                                </GlassButton>
+                                </button>
                             </Link>
                             <Link href="/lantern">
-                                <GlassButton variant="secondary" size="lg" className="w-full sm:w-auto">
+                                <button className="px-8 py-4 text-lg font-semibold bg-hot-pink text-white rounded-full shadow-[0_8px_24px_rgba(232,60,145,0.4)] hover:shadow-[0_12px_32px_rgba(232,60,145,0.5)] hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-hot-pink hover:border-light-pink w-full sm:w-auto">
                                     Leave a Lantern Note
-                                </GlassButton>
+                                </button>
                             </Link>
                         </div>
 
@@ -406,10 +406,10 @@ export default function HomePage() {
                             <Link href="/inbox">
                                 <GlassCard hoverEffect className="p-8 group">
                                     <div className="text-4xl mb-4">📬</div>
-                                    <h3 className="font-serif text-2xl font-bold text-dark-plum mb-3">
+                                    <h3 className="font-serif text-2xl font-bold text-black mb-3">
                                         View Your Inbox
                                     </h3>
-                                    <p className="text-dark-plum/70 leading-relaxed">
+                                    <p className="text-black/80 leading-relaxed">
                                         Check for supportive Lantern Notes from the community
                                     </p>
                                 </GlassCard>
@@ -418,10 +418,10 @@ export default function HomePage() {
                             <Link href="/lantern">
                                 <GlassCard hoverEffect variant="highlight" className="p-8 group md:-mt-6">
                                     <div className="text-4xl mb-4">🏮</div>
-                                    <h3 className="font-serif text-2xl font-bold text-dark-plum mb-3">
+                                    <h3 className="font-serif text-2xl font-bold text-black mb-3">
                                         Light a Lantern
                                     </h3>
-                                    <p className="text-dark-plum/70 leading-relaxed">
+                                    <p className="text-black/80 leading-relaxed">
                                         Send an anonymous note of support to someone who shared
                                     </p>
                                 </GlassCard>
@@ -430,10 +430,10 @@ export default function HomePage() {
                             <Link href="/delete">
                                 <GlassCard hoverEffect className="p-8 group">
                                     <div className="text-4xl mb-4">🔒</div>
-                                    <h3 className="font-serif text-2xl font-bold text-dark-plum mb-3">
+                                    <h3 className="font-serif text-2xl font-bold text-black mb-3">
                                         Delete Story
                                     </h3>
-                                    <p className="text-dark-plum/70 leading-relaxed">
+                                    <p className="text-black/80 leading-relaxed">
                                         Permanently remove your story using your deletion code
                                     </p>
                                 </GlassCard>
@@ -466,12 +466,12 @@ export default function HomePage() {
                             {/* Top accent line */}
                             <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-hot-pink/30 to-transparent rounded-full" />
 
-                            <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark-plum mb-3 relative inline-block">
+                            <h2 className="font-serif text-4xl md:text-5xl font-bold text-black mb-3 relative inline-block">
                                 Community Stories
                                 {/* Decorative underline */}
                                 <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-hot-pink/20 via-light-pink/30 to-hot-pink/20 rounded-full" />
                             </h2>
-                            <p className="text-lg text-dark-plum/70 font-light mt-4">
+                            <p className="text-lg text-black/80 font-light mt-4">
                                 Real stories. Real support. Real human connection.
                             </p>
                         </div>
@@ -519,7 +519,7 @@ export default function HomePage() {
                                                 {story.context_tags.slice(0, 3).map((tag, i) => (
                                                     <span
                                                         key={i}
-                                                        className="text-sm font-bold bg-white text-slate-900 px-4 py-1.5 rounded-full shadow-md border border-slate-200"
+                                                        className="text-sm font-bold bg-white text-black px-4 py-1.5 rounded-full shadow-md border border-slate-200"
                                                     >
                                                         {tag}
                                                     </span>
@@ -529,7 +529,7 @@ export default function HomePage() {
 
                                         {/* Story text - takes up available space */}
                                         <div className={`flex-grow ${expandedStories[story.id] ? 'overflow-y-auto max-h-60 pr-2 scrollbar-thin scrollbar-thumb-slate-400 scrollbar-track-transparent' : 'overflow-hidden'}`}>
-                                            <p className="text-lg text-slate-800 leading-relaxed font-serif">
+                                            <p className="text-lg text-black leading-relaxed font-serif">
                                                 {expandedStories[story.id]
                                                     ? story.narrative_redacted
                                                     : truncateText(story.narrative_redacted)}
@@ -537,7 +537,7 @@ export default function HomePage() {
                                             {story.narrative_redacted.length > 180 && (
                                                 <button
                                                     onClick={() => toggleStoryExpansion(story.id)}
-                                                    className="mt-2 text-sm font-medium text-slate-600 hover:text-slate-900 underline transition-colors"
+                                                    className="mt-2 text-sm font-medium text-black hover:text-hot-pink underline transition-colors"
                                                 >
                                                     {expandedStories[story.id] ? 'See less' : 'Read more'}
                                                 </button>
