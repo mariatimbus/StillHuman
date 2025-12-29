@@ -27,6 +27,9 @@ const POST_IT_COLORS = [
     'green',
     'yellow',
     'purple',
+    'orange',
+    'teal',
+    'cyan',
 ];
 
 export default function HomePage() {
