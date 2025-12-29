@@ -23,13 +23,11 @@ interface Story {
 // Post-it colors (soft, varied  palette)
 const POST_IT_COLORS = [
     'rose',
-    'blue',
-    'green',
-    'yellow',
-    'purple',
-    'orange',
-    'teal',
-    'cyan',
+    'lavender',
+    'blush',
+    'plum',
+    'cream',
+    'peach',
 ];
 
 export default function HomePage() {
