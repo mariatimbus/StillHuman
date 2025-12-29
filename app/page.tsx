@@ -314,7 +314,7 @@ export default function HomePage() {
                             <div className="w-24 h-24 rounded-full bg-white/30 backdrop-blur-md flex items-center justify-center border border-white/40 hover:scale-110 transition-transform duration-200 p-2">
                                 <img src="/invisible-borders-logo.png" alt="Invisible Borders" className="w-full h-full object-contain" />
                             </div>
-                            <span className="font-serif text-3xl font-bold text-black tracking-wide hover:text-hot-pink transition-colors duration-200">
+                            <span className="font-serif text-3xl font-bold text-black tracking-wide hover:text-hot-pink transition-colors duration-200 uppercase">
                                 Invisible Borders
                             </span>
                         </div>
