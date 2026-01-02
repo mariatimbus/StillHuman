@@ -661,11 +661,11 @@ export default function HomePage() {
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                         <div className="flex items-center gap-2">
                             <span className="font-serif text-xl font-bold text-slate-800">
-                                Still Human
+                                Invisible Borders
                             </span>
                         </div>
                         <div className="text-slate-600 text-sm">
-                            © 2025 Still Human. Your stories are shared with care.
+                            © 2025 Invisible Borders. Your stories are shared with care.
                         </div>
                     </div>
                 </footer>
