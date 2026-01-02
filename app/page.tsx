@@ -629,14 +629,14 @@ export default function HomePage() {
 
                                                     <button
                                                         onClick={() => toggleComments(story.id)}
-                                                        className="text-slate-600 hover:text-blue-600 transition-colors p-2 rounded-full hover:bg-white/20 flex items-center gap-1.5"
+                                                        className="text-black hover:text-blue-600 transition-colors p-2 rounded-full hover:bg-white/20 flex items-center gap-1.5"
                                                     >
                                                         <MessageCircle size={20} />
                                                     </button>
                                                     <button
                                                         onClick={() => toggleReply(story.id)}
                                                         disabled={story._isPending}
-                                                        className={`text-slate-600 hover:text-purple-600 transition-colors p-2 rounded-full hover:bg-white/20 ${story._isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                        className={`text-black hover:text-purple-600 transition-colors p-2 rounded-full hover:bg-white/20 ${story._isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                     >
                                                         <Send size={20} />
                                                     </button>
@@ -664,7 +664,7 @@ export default function HomePage() {
                                 Invisible Borders
                             </span>
                         </div>
-                        <div className="text-slate-600 text-sm">
+                        <div className="text-black text-sm">
                             © 2025 Invisible Borders. Your stories are shared with care.
                         </div>
                     </div>
