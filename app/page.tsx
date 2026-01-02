@@ -377,7 +377,7 @@ export default function HomePage() {
                         </div>
 
                         <div className="relative mb-6">
-                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-hot-pink/40 via-light-pink/40 to-hot-pink/40 rounded-full" />
+                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-black rounded-full" />
                             <BlurText
                                 text="Your experiences matter."
                                 delay={100}
@@ -494,12 +494,12 @@ export default function HomePage() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-12 relative">
                             {/* Top accent line */}
-                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-hot-pink/30 to-transparent rounded-full" />
+                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-1 bg-black rounded-full" />
 
                             <h2 className="font-serif text-4xl md:text-5xl font-bold text-black mb-3 relative inline-block">
                                 Community Stories
                                 {/* Decorative underline */}
-                                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-hot-pink/20 via-light-pink/30 to-hot-pink/20 rounded-full" />
+                                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-black rounded-full" />
                             </h2>
                             <p className="text-lg text-black/80 font-light mt-4">
                                 Real stories. Real support. Real human connection.
