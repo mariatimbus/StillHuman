@@ -578,7 +578,7 @@ export default function HomePage() {
                                         {expandedComments[story.id] && (
                                             <div className="mt-4 pt-3 border-t border-black/5 animate-fade-in">
                                                 {loadingComments[story.id] ? (
-                                                    <div className="text-center py-4 text-slate-500 text-xs">Loading comments...</div>
+                                                    <div className="text-center py-4 text-black text-xs">Loading comments...</div>
                                                 ) : commentsData[story.id] && commentsData[story.id].length > 0 ? (
                                                     <div className="space-y-3 mb-3 max-h-40 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-300">
                                                         {commentsData[story.id].map((comment: any) => (
@@ -591,7 +591,7 @@ export default function HomePage() {
                                                         ))}
                                                     </div>
                                                 ) : (
-                                                    <div className="text-center py-4 text-slate-500 text-xs italic">
+                                                    <div className="text-center py-4 text-black text-xs italic">
                                                         No comments yet. Be the first to share some love!
                                                     </div>
                                                 )}
@@ -605,7 +605,7 @@ export default function HomePage() {
                                                     value={replyText[story.id] || ''}
                                                     onChange={(e) => handleReplyChange(story.id, e.target.value)}
                                                     placeholder="Write a supportive reply (min 10 chars)..."
-                                                    className="flex-1 bg-white/40 border border-white/30 placeholder:text-slate-500 text-black rounded-full px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-purple-400 focus:bg-white/60 transition-all"
+                                                    className="flex-1 bg-white/40 border border-white/30 placeholder:text-black text-black rounded-full px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-purple-400 focus:bg-white/60 transition-all"
                                                     disabled={sendingReply[story.id]}
                                                 />
                                                 <button
@@ -642,7 +642,7 @@ export default function HomePage() {
                                                     </button>
                                                 </div>
 
-                                                <div className="text-xs text-slate-500 italic font-medium whitespace-nowrap">
+                                                <div className="text-xs text-black italic font-medium whitespace-nowrap">
                                                     {getDisplayDate(story.created_at, story.id)}
                                                 </div>
                                             </div>
