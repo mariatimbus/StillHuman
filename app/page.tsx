@@ -339,7 +339,7 @@ export default function HomePage() {
 
                     <div className="max-w-5xl mx-auto text-center relative">
                         {/* Decorative accent line top */}
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-hot-pink/30 to-transparent rounded-full" />
+
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8 animate-fade-in-up shadow-[0_4px_12px_rgba(232,60,145,0.1)]">
                             <span className="text-sm font-medium text-black">
@@ -361,7 +361,7 @@ export default function HomePage() {
                                 delay={120}
                                 animateBy="words"
                                 direction="top"
-                                className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-hot-pink to-dark-plum opacity-90 leading-tight drop-shadow-sm text-center justify-center"
+                                className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-hot-pink leading-tight drop-shadow-sm text-center justify-center"
                             />
                         </div>
 
@@ -383,20 +383,20 @@ export default function HomePage() {
                         </div>
 
                         {/* Decorative accent line bottom */}
-                        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-48 h-1 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent rounded-full" />
+
                     </div>
                 </section>
 
                 {/* Decorative Section Divider */}
                 <div className="w-full flex items-center justify-center px-6 py-8">
                     <div className="flex items-center gap-4 max-w-4xl w-full">
-                        <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-purple-300/30 to-purple-400/30" />
+                        <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-purple-600" />
                         <div className="flex gap-2">
-                            <div className="w-2 h-2 rounded-full bg-purple-400/40 animate-pulse-slow" />
-                            <div className="w-2 h-2 rounded-full bg-pink-400/40 animate-pulse-slow" style={{ animationDelay: '0.2s' }} />
-                            <div className="w-2 h-2 rounded-full bg-blue-400/40 animate-pulse-slow" style={{ animationDelay: '0.4s' }} />
+                            <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse-slow" />
+                            <div className="w-2 h-2 rounded-full bg-pink-600 animate-pulse-slow" style={{ animationDelay: '0.2s' }} />
+                            <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse-slow" style={{ animationDelay: '0.4s' }} />
                         </div>
-                        <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-purple-300/30 to-purple-400/30" />
+                        <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-purple-400 to-purple-600" />
                     </div>
                 </div>
 
@@ -446,13 +446,13 @@ export default function HomePage() {
                 {/* Decorative Section Divider */}
                 <div className="w-full flex items-center justify-center px-6 py-8">
                     <div className="flex items-center gap-4 max-w-4xl w-full">
-                        <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-blue-300/30 to-blue-400/30" />
+                        <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent via-blue-400 to-blue-600" />
                         <div className="flex gap-2">
-                            <div className="w-2 h-2 rounded-full bg-blue-400/40 animate-pulse-slow" />
-                            <div className="w-2 h-2 rounded-full bg-purple-400/40 animate-pulse-slow" style={{ animationDelay: '0.2s' }} />
-                            <div className="w-2 h-2 rounded-full bg-pink-400/40 animate-pulse-slow" style={{ animationDelay: '0.4s' }} />
+                            <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse-slow" />
+                            <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse-slow" style={{ animationDelay: '0.2s' }} />
+                            <div className="w-2 h-2 rounded-full bg-pink-600 animate-pulse-slow" style={{ animationDelay: '0.4s' }} />
                         </div>
-                        <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-blue-300/30 to-blue-400/30" />
+                        <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent via-blue-400 to-blue-600" />
                     </div>
                 </div>
 
