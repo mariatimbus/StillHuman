@@ -366,8 +366,7 @@ export default function HomePage() {
                     <div className="absolute bottom-10 left-1/4 w-12 h-12 border-2 border-dark-plum/20 rotate-45 animate-float" />
 
                     <div className="max-w-5xl mx-auto text-center relative">
-                        {/* Decorative accent line top */}
-                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-black rounded-full" />
+
 
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8 animate-fade-in-up shadow-[0_4px_12px_rgba(232,60,145,0.1)]">
@@ -377,7 +376,6 @@ export default function HomePage() {
                         </div>
 
                         <div className="relative mb-6">
-                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-hot-pink/40 via-light-pink/40 to-hot-pink/40 rounded-full" />
                             <BlurText
                                 text="Your experiences matter."
                                 delay={100}
