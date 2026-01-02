@@ -19,10 +19,10 @@ export function GlassButton({
 
     const variants = {
         primary:
-            'bg-white/20 backdrop-blur-md border border-white/30 text-slate-800 hover:bg-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105',
+            'bg-white/20 backdrop-blur-md border border-white/30 text-black hover:bg-white/30 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105',
         secondary:
-            'bg-slate-800/10 backdrop-blur-sm border border-slate-800/10 text-slate-800 hover:bg-slate-800/20 hover:scale-105',
-        ghost: 'bg-transparent hover:bg-white/10 text-slate-800 hover:text-slate-900 hover:scale-105',
+            'bg-black/10 backdrop-blur-sm border border-black/10 text-black hover:bg-black/20 hover:scale-105',
+        ghost: 'bg-transparent hover:bg-white/10 text-black hover:text-black hover:scale-105',
     };
 
     const sizes = {

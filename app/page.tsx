@@ -377,7 +377,7 @@ export default function HomePage() {
                         </div>
 
                         <div className="relative mb-6">
-                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-black rounded-full" />
+                            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-hot-pink/40 via-light-pink/40 to-hot-pink/40 rounded-full" />
                             <BlurText
                                 text="Your experiences matter."
                                 delay={100}
@@ -494,12 +494,12 @@ export default function HomePage() {
                     <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-12 relative">
                             {/* Top accent line */}
-                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-1 bg-black rounded-full" />
+                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-hot-pink/30 to-transparent rounded-full" />
 
                             <h2 className="font-serif text-4xl md:text-5xl font-bold text-black mb-3 relative inline-block">
                                 Community Stories
                                 {/* Decorative underline */}
-                                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-black rounded-full" />
+                                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-hot-pink/20 via-light-pink/30 to-hot-pink/20 rounded-full" />
                             </h2>
                             <p className="text-lg text-black/80 font-light mt-4">
                                 Real stories. Real support. Real human connection.
@@ -583,7 +583,7 @@ export default function HomePage() {
                                                     <div className="space-y-3 mb-3 max-h-40 overflow-y-auto pr-1 scrollbar-thin scrollbar-thumb-slate-300">
                                                         {commentsData[story.id].map((comment: any) => (
                                                             <div key={comment.id} className="text-sm bg-white/30 p-2.5 rounded-lg">
-                                                                <span className="font-bold text-slate-800 block text-xs mb-1">
+                                                                <span className="font-bold text-black block text-xs mb-1">
                                                                     {comment.note_type === 'responder' ? 'Supporter' : 'Community'}
                                                                 </span>
                                                                 <p className="text-slate-700 text-xs leading-relaxed">{comment.note_text}</p>
@@ -605,13 +605,13 @@ export default function HomePage() {
                                                     value={replyText[story.id] || ''}
                                                     onChange={(e) => handleReplyChange(story.id, e.target.value)}
                                                     placeholder="Write a supportive reply (min 10 chars)..."
-                                                    className="flex-1 bg-white/40 border border-white/30 placeholder:text-slate-500 text-slate-800 rounded-full px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-purple-400 focus:bg-white/60 transition-all"
+                                                    className="flex-1 bg-white/40 border border-white/30 placeholder:text-slate-500 text-black rounded-full px-3 py-1.5 text-xs focus:outline-none focus:ring-1 focus:ring-purple-400 focus:bg-white/60 transition-all"
                                                     disabled={sendingReply[story.id]}
                                                 />
                                                 <button
                                                     onClick={() => sendReply(story.id)}
                                                     disabled={sendingReply[story.id]}
-                                                    className="bg-slate-800 text-white p-1.5 rounded-full hover:bg-slate-700 transition-colors shadow-sm disabled:opacity-50"
+                                                    className="bg-black text-white p-1.5 rounded-full hover:bg-slate-900 transition-colors shadow-sm disabled:opacity-50"
                                                 >
                                                     {sendingReply[story.id] ? (
                                                         <div className="w-3 h-3 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -660,7 +660,7 @@ export default function HomePage() {
                 <footer className="py-12 px-6 border-t border-white/20 bg-white/5 backdrop-blur-sm">
                     <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
                         <div className="flex items-center gap-2">
-                            <span className="font-serif text-xl font-bold text-slate-800">
+                            <span className="font-serif text-xl font-bold text-black">
                                 Invisible Borders
                             </span>
                         </div>
