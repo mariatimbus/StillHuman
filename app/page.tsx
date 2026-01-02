@@ -249,6 +249,34 @@ export default function HomePage() {
         return text.substring(0, maxLength) + '...';
     };
 
+    const getDisplayDate = (dateString: string, id: string) => {
+        const date = new Date(dateString);
+        const cutoffDate = new Date('2026-01-03');
+
+        // If date is before Jan 3, 2026, randomize it to Aug-Dec 2025
+        if (date < cutoffDate) {
+            // Simple deterministic hash from ID
+            let hash = 0;
+            for (let i = 0; i < id.length; i++) {
+                hash = ((hash << 5) - hash) + id.charCodeAt(i);
+                hash |= 0;
+            }
+
+            // Map hash to a month between 7 (August) and 11 (December)
+            // Math.abs(hash) % 5 gives 0-4. + 7 gives 7-11.
+            const randomMonth = (Math.abs(hash) % 5) + 7;
+
+            // Set to 2025
+            date.setFullYear(2025);
+            date.setMonth(randomMonth);
+        }
+
+        return date.toLocaleDateString('en-US', {
+            month: 'short',
+            year: 'numeric',
+        });
+    };
+
     return (
         <div className="min-h-screen w-full relative overflow-x-hidden">
             {/* Enhanced Multi-Layer Gradient Background with Patterns */}
@@ -339,6 +367,7 @@ export default function HomePage() {
 
                     <div className="max-w-5xl mx-auto text-center relative">
                         {/* Decorative accent line top */}
+                        <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-32 h-1 bg-black rounded-full" />
 
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8 animate-fade-in-up shadow-[0_4px_12px_rgba(232,60,145,0.1)]">
@@ -597,9 +626,7 @@ export default function HomePage() {
                                         <div className="mt-auto pt-4 border-t border-black/5">
                                             <div className="h-10 flex items-center justify-between">
                                                 <div className="flex items-center gap-4">
-                                                    <button className="text-slate-600 hover:text-rose-500 transition-colors p-2 rounded-full hover:bg-white/20">
-                                                        <Heart size={20} />
-                                                    </button>
+
                                                     <button
                                                         onClick={() => toggleComments(story.id)}
                                                         className="text-slate-600 hover:text-blue-600 transition-colors p-2 rounded-full hover:bg-white/20 flex items-center gap-1.5"
@@ -616,10 +643,7 @@ export default function HomePage() {
                                                 </div>
 
                                                 <div className="text-xs text-slate-500 italic font-medium whitespace-nowrap">
-                                                    {new Date(story.created_at).toLocaleDateString('en-US', {
-                                                        month: 'short',
-                                                        day: 'numeric',
-                                                    })}
+                                                    {getDisplayDate(story.created_at, story.id)}
                                                 </div>
                                             </div>
                                         </div>
